@@ -64,6 +64,6 @@ RUN wget -q -O - https://cdn.edgeimpulse.com/firmware/linux/jetson.sh | bash
 
 ENV UDEV=1
 
-WORKDIR /usr/local/cuda-10.0/samples/bin/aarch64/linux/release
+WORKDIR /usr/local/cuda-10.2/samples/bin/aarch64/linux/release
 
 CMD [ "sleep", "infinity" ]
