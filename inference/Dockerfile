@@ -64,6 +64,9 @@ RUN wget -q -O - https://cdn.edgeimpulse.com/firmware/linux/jetson.sh | bash
 
 ENV UDEV=1
 
+RUN chown -R $(whoami) $HOME
 WORKDIR /usr/local/cuda-10.2/samples/bin/aarch64/linux/release
+
+RUN chown -R $(whoami) $HOME
 
 CMD [ "sleep", "infinity" ]
