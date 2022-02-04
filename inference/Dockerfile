@@ -59,6 +59,9 @@ RUN apt-get update && apt-get install lbzip2 xorg -y && \
     echo "/usr/lib/aarch64-linux-gnu/tegra" > /etc/ld.so.conf.d/nvidia-tegra.conf && ldconfig && \
     rm -rf *.tbz2
 
+RUN apt install -y wget gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-base gstreamer1.0-plugins-base-apps
+RUN wget -q -O - https://cdn.edgeimpulse.com/firmware/linux/jetson.sh | bash
+
 ENV UDEV=1
 
 WORKDIR /usr/local/cuda-10.0/samples/bin/aarch64/linux/release
