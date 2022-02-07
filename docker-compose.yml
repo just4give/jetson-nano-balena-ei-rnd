@@ -6,6 +6,9 @@ services:
                 restart: always
                 network_mode: host
                 container_name: inference
+                cap_add:
+                        - CAP_SYS_ADMIN
+                        - CAP_SYS_RAWIO
                 ports: 
                         - 8080
                 labels:
