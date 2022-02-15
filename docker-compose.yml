@@ -23,7 +23,7 @@ services:
                         PULSE_SERVER: tcp:audio:4317
                 devices:
                         - '/dev:/dev'
-         audio:
+        audio:
                 image: balenablocks/audio
                 privileged: true
                 ports:
